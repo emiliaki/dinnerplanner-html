@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dinner planner</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+
+  </head>
+  <body>
+<div class="jumbotron text-center">
+      <h1><b>Dinner Planner</b></h1>
+  </div>
+
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-xs-2 col-md-2" style="border: 1px solid black;">
+      <!-- sidebar view -->
+      <h3>My Dinner</h3>
+      People
+      <hr class="divider"/>
+      <div class="row">
+        <div class="col-xs-6 col-md-6">Dish Name</div>
+        <div class="col-xs-4 col-md-6">Cost</div>
+      </div>
+      <hr class="divider"/>
+      <div class="row">
+        <div class="col-xs-6 col-md-6"></div>
+        <div class="col-xs-4 col-md-6">SEK 0.00</div>
+      </div>
+      <button>Confirm Dinner</button>
+    </div>
+
+    <div class="col-xs-5 col-md-5">
+      <!-- dish -->
+      <h2>Lasagne</h2>
+      <img src="///Users/emiliaki/Documents/KTH/ÅK3/interaktionsprogrammering/GitHub/dinnerplanner-html/images/icecream.jpg"/ style="outline: 1px solid black;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+      <button class="btn" style="background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+        back to search
+      </button>
+      <h3>Preparation</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+    </div>
+
+    <div id ="ingredientsView" class="col-xs-5 col-md-5" style="background-color: rgba(244, 179, 100, 1); border: 1px solid black;">
+      <h3>Ingredients for X <!-- getnumberguests --> People</h3>
+      <!-- alla ingredients till dish och price -->
+      <hr class="divider"/>
+          <row id="allIngredients">
+            </row>
+      <hr class="divider"/>
+      <button class="btn" style="background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+        Add to menu
+      </button>
+    </div>
+  </div>
+      <script src="https://code.jquery.com/jquery.js"></script>
+    <!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+
+  <!-- The application JavaScript code -->
+  <script src="js/app.js"></script>
+  <script src="js/model/dinnerModel.js"></script>
+  <script src="js/view/exampleView.js"></script>
+  <script src="js/view/ingredientsview.js"></script>
+  </body>
+</html>​
