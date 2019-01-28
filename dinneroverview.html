@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Select</title>
+    <title>Overview</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
@@ -14,25 +14,31 @@
   <div class="jumbotron text-center">
       <h1><b>Dinner Planner</b></h1>
   </div>
-
-  <div class="container-fluid">
-    <div class="row">
-      
-<button class="btn1 visible-xs" type="button" data-toggle="collapse" data-target="#toggle">Sidebar</button>
-      <div id="sidesbarview" class="hidden-xs col-md-2" style="border: 1px solid black; height: 500px;">
-        <span id="sidebar"></span>
-      </div>
-
-      <div class="col-xs-10 col-md-10">
-          
-          <div class="container-fluid" id="DishSearchView">
-            <h4>FIND A DISH</h4>
-          
-          <div class="container-fluid" id="line"></div>
-          <div id="dishsearch"></div>
-      </div>
+  
+ <div class="container" id="exampleView">
+    <span id="numberOfGuests"></span>
 </div>
+
+<hr class="divider" style="border-bottom: 1px solid black;"/>
+
+  <div class="container text-center" id="ItemimgView">
+    <!-- full menu image, namn, price & full total price -->
+    <div class="row">
+      <span id="dishitem"></span>
     </div>
+    <div class="row">
+      <div class="col-xs-12 col-md-12">
+        Total Price: <span id="totalmenuprice"></span> SEK
+      </div>
+    </div>
+
+<hr class="divider" style="border:1px solid black;"/>
+
+  <div class="col-md-12 text-center" style="padding: 20px 0 20px 0;">
+  <button class="btn" style="background-color: rgba(244, 179, 80, 1); border: black; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);">
+      Print Full Recipe
+  </button>
+</div>
 
 <script src="https://code.jquery.com/jquery.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
@@ -46,8 +52,7 @@
 <script src="js/view/itemimgView.js"></script>
 <script src="js/view/sidesbarview.js"></script>
 <script src="js/view/Welcomeview.js"></script>
-<script src="js/view/dishsearchview.js"></script>
 
-</div>
+
   </body>
 </html>

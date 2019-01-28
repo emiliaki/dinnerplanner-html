@@ -1,64 +1,95 @@
 //DinnerModel Object constructor
 class DinnerModel {
 
-
-
     constructor(){
 	this.dishes=dishesConst; // to be replaced in lab 3
-
-	this.numberOfGuests = 0;
-	this.selectedDishes = {};
 	
 	//TODO Lab 1 implement the data structure that will hold number of guest
 	// and selected dishes for the dinner menu
 
+	const menuconst = [];
+	this.menu = menuconst;
+
+	this.number = 0;
+
     }
 
 	setNumberOfGuests(num) {
-		this.numberOfGuests = num;
+		//TODO Lab 1
+		this.number = num;
+		
 	}
 	
 	getNumberOfGuests() {
-		return this.numberOfGuests;
+		//TODO Lab 1
+		return this.number;
+		
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	getSelectedDish(type) {
-		return this.selectedDishes[type];
+		//TODO Lab 1
+		for(let dsh of this.menu){
+		if(dsh.type == type) {
+		    return dsh;
+		}
+	    }
+
+	}
+
+	getSelectedDishTotal(type){
+		const typearray = []
+		for(let dsh of this.dishes){
+			if (dsh.type == type) {
+				typearray.push(dsh);
+			}
+		}
+		return typearray;
 	}
 
 	//Returns all the dishes on the menu.
 	getFullMenu() {
-		return dishes;
+		//TODO Lab 1
+		return this.menu;
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	getAllIngredients() {
-		var fullMenu = this.getFullMenu();
-		var allIngredients = [];
-		for(i in fullMenu){
-			allIngredients = allIngredients.concat(fullMenu[i].ingredients);
-		}
-		//this.model.notify(); 
-		return allIngredients;
-	}
 		//TODO Lab 1
+		for(let dsh of this.menu){
+			return dsh.ingredients;
+		}
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	getTotalMenuPrice() {
 		//TODO Lab 1
+		var price = 0;
+		for(let dsh of this.menu){
+			for(let ing of dsh.ingredients){
+				price += ing.price * this.number;
+			}
+		}
+		return price;
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	addDishToMenu(id) {
 		//TODO Lab 1 
+		for(let dsh of this.menu){
+		if(dsh.id == id) {
+		    this.menu.splice(this.menu.indexOf(id), 1);
+		}
+	    }
+	    this.menu.push(this.getDish(id));
 	}
 
 	//Removes dish from menu
 	removeDishFromMenu(id) {
 		//TODO Lab 1
+		var menu = this.menu;
+		menu.splice(menu.indexOf(id), 1);
 	}
 
     
@@ -93,6 +124,7 @@ class DinnerModel {
 	    }
 	    return undefined;
 	}
+}
 
 	// the dishes constant contains an array of all the 
 	// dishes in the database. Each dish has id, name, type,

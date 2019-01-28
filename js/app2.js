@@ -8,7 +8,7 @@ $(function() {
 
 	var ItemimgView = new ItemImgView($("#ItemimgView"), model);
 
-	var detailview = new DetailView($("#detailView"), model);
+	var detailView = new DetailView($("#detailView"), model);
 
 	var sidebar = new SidebarView($("#sidesbarview"), model);
 
@@ -16,17 +16,17 @@ $(function() {
 
 	var dishsearchview = new DishSearchView($("#DishSearchView"), model);
 
-$("#sidesbarview").show();
+
+
+$("#sidesbarview").hide();
 $("#exampleView").hide();
 $("#itemView").hide();
-$("#detailView").show();
+$("#detailView").hide();
 $("#WelcomeView").hide();
 $("#DishSearchView").hide();
 $("#ItemimgView").hide();
 $("#selectdishview").hide();
 $("#selectdishagainview").hide();
 
-createNewDinner()
-all.
 
 });
